@@ -7,4 +7,71 @@
 
 {% include 'navbar-v1.html' %}
 
+<div class="container">
+  <div class="row signup">
+    <div class="col-12  col-sm-6">
+      <div class="signup-left-partition">
+        <img src="{{ url_for('static', filename='img/group-5.svg') }}" alt="" srcset="">
+      </div>
+    </div>
+
+    <div class="col-12  col-sm-6">
+      <div class="signup-right-partition">
+        <!-- Material form register -->
+        <div class="container mera-form">
+          <div class="card">
+            <h5 class="card-header white-text text-center py-4 indigo">
+              <strong>Sign up</strong>
+            </h5>
+            <!--Card content-->
+            <div class="card-body px-lg-5 pt-0">
+              <!-- Form -->
+              <form class="text-center" style="color: #757575;" action="./signup.php" method="POST"
+                enctype="multipart/form-data">
+                <div class="form-row">
+                  <div class="col">
+                    <!-- Email -->
+                    <div class="md-form">
+                      <input type="email" id="email" class="form-control" name="pemail" required>
+                      <label for="email">Email</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="col">
+                    <!-- Password -->
+                    <div class="md-form">
+                      <input type="password" id="password" class="form-control" name="p_password" required>
+                      <label for="password">Password</label>
+                      <small id="materialRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
+                        At least 8 characters including 1 digit
+                      </small>
+                    </div>
+                  </div>
+                </div>
+                <!-- Sign up button -->
+                <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit"
+                  name="btn_pat">Sign up</button>
+
+                <hr>
+
+                <!-- Terms of service -->
+                <p>By clicking
+                  <em>Sign up</em> you agree to our
+                  <a href="#" target="_blank">terms of service</a>
+                </p>
+              </form>
+              <!-- Form -->
+
+            </div>
+
+          </div>
+        </div>
+        <!-- Material form register -->
+
+      </div>
+    </div>
+  </div>
+</div>
+
 {% endblock %}
