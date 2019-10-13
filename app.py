@@ -10,15 +10,15 @@ def index():
   form = LoginForm()
   return render_template('index.html', form=form)
 
-@app.route('/signup', methods=['GET', 'POST'])
-def signup():
-  form = RegisterationForm()
-  if form.validate_on_submit():
-    flash(f'Account created for {form.email.data}!', 'success')
-    return redirect(url_for('/'))
-  else:
-    print('Kataa')
-  return render_template('signup.html', title='Register', form=form)
+# @app.route('/signup', methods=['GET', 'POST'])
+# def signup():
+#   form = RegisterationForm()
+#   if form.validate_on_submit():
+#     flash(f'Account created for {form.email.data}!', 'success')
+#     return redirect(url_for('/'))
+#   else:
+#     print('Kataa')
+#   return render_template('signup.html', title='Register', form=form)
 
 
 if __name__ == '__main__':
