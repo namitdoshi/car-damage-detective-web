@@ -3,3 +3,26 @@
   display: flex;
   align-items: center;
 }
+
+.jumbotron-container {
+  height: 91.8vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+}
+
+.jumbotron-local {
+  background-image: url(https://mdbootstrap.com/img/Photos/Others/gradient1.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* height: 50vh; */
+  margin-bottom: 0 !important;
+}
+
+.jumbotron-btn {
+  border-radius: 2rem;
+  border: 2px solid whitesmoke;
+}
