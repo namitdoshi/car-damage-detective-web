@@ -26,13 +26,16 @@
             <!--Card content-->
             <div class="card-body px-lg-5 pt-0">
               <!-- Form -->
-              <form class="text-center" style="color: #757575;">
+              <form class="text-center" style="color: #757575;" method="POST" action="">
+                {{ form.hidden_tag() }}
                 <div class="form-row">
                   <div class="col">
                     <!-- Email -->
                     <div class="md-form">
-                      <input type="email" id="email" class="form-control" name="email" required>
-                      <label for="email">Email</label>
+                      <!-- <input type="email" id="email" class="form-control" name="email" required> -->
+                      <!-- <label for="email">Email</label> -->
+                      {{ form.email(class="form-control") }}
+                      {{ form.email.label() }}
                     </div>
                   </div>
                 </div>
@@ -40,8 +43,10 @@
                   <div class="col">
                     <!-- Password -->
                     <div class="md-form">
-                      <input type="password" id="password" class="form-control" name="password" required>
-                      <label for="password">Password</label>
+                      <!-- <input type="password" id="password" class="form-control" name="password" required> -->
+                      <!-- <label for="password">Password</label> -->
+                      {{ form.password(class="form-control") }}
+                      {{ form.password.label() }}
                       <small id="materialRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
                         At least 8 characters including 1 digit
                       </small>
@@ -49,8 +54,9 @@
                   </div>
                 </div>
                 <!-- Sign up button -->
-                <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit"
-                  name="btn_pat">Sign up</button>
+                <!-- <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit"
+                  name="btn_pat">Sign up</button> -->
+                {{ form.submit(class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0") }}
 
                 <hr>
 
