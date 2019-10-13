@@ -21,6 +21,9 @@ def index():
 #     print('Kataa')
 #   return render_template('signup.html', title='Register', form=form)
 
+@app.route('/damage-detection')
+def damage():
+  return render_template('upload-pictures.html')
 
 if __name__ == '__main__':
   app.run(debug=True)
