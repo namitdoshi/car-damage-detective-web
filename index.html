@@ -8,11 +8,7 @@
 
 {% include 'navbar-v1.html' %}
 
-
-<!-- Header -->
-<header id="layout-header">
-  {% templates 'site/header' %}
-</header>
+{%header}
 
 <!-- about -->
 <main>
@@ -127,11 +123,6 @@
   </div>
 </main>
 
-<!-- Footer -->
-<footer id="layout-footer">
-  {% templates 'site/footer' %}
-</footer>
-{% framework extras %}
-{% scripts %}
+{% include 'footer.html' %}
 
 {% endblock %}
