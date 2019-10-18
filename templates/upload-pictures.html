@@ -18,10 +18,10 @@
           <p class="mx-5 mb-5">All you need to do is upload pictures of your car and our system will process them to
             find all the damage locations.
           </p>
-          <input type="file" class="btn btn-outline-white btn-md" multiple="multiple">
-          <button type="button" class="btn jumbotron-btn">Check for damage</button>
-
-
+          <form method="POST" action="/uploaded-images" enctype="multipart/form-data">
+          <input type="file" name="images" class="btn btn-outline-white btn-md" accept="image/*" multiple>
+          <button type="submit" class="btn jumbotron-btn">Check for damage</button>
+        </form>
         </div>
       </div>
     </div>

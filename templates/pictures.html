@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+<style>
+  .image-container {
+    text-align: center;
+    margin-bottom: 5rem;
+    min-height: 90vh;
+  }
+  img {
+    width:40%;
+    margin: 1rem;
+  }
+  .heading {
+    margin: 6rem 0 2rem; 
+    text-align: center;
+  }
+</style>
+{% endblock %}
+
+{% block body %}
+
+{% include 'navbar-v1.html' %}
+
+<div class="container">
+  <h2 class="heading"> Here are the images you uploaded....</h2>
+  <div class="image-container">
+    {% for i in images %}
+    <img src="{{ i }}">
+    {% endfor %}
+  </div>
+</div>
+
+{% include 'footer.html' %}
+
+{% endblock %}
