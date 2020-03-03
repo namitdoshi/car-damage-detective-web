@@ -16,6 +16,34 @@ All you need to do is upload pictures of your car and our system will process th
 
 The main purpose of this repository is to continue to evolve project, making it faster and easier to use. Development happens in the open on GitHub, and we are grateful to the community for contributing bugfixes and improvements. Read below to learn how you can take part in improving.
 
+## Installation
+
+```bash
+cd car-damage-detective-web
+```
+#### on bash
+
+```bash
+python -m venv venv
+
+. venv/bin/activate
+```
+
+#### on windows
+
+```bash
+py -3 -m venv venv
+
+venv\Scripts\activate
+```
+
+```bash
+pip install Flask
+
+pip install sql_alchemy
+
+python app.py
+```
 ### License
 
 Car Damage Detective is [MIT licensed](./LICENSE).
